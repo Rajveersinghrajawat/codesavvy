@@ -161,6 +161,12 @@
                                             <span class="sub-item">Services We Offer</span>
                                         </a>
                                     </li>
+
+                                    <li>
+                                        <a href="{{url('codesavvy-admin/invoice')}}">
+                                            <span class="sub-item">Invoice</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>

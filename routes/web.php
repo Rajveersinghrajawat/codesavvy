@@ -6,6 +6,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FaqsController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QueresController;
 use App\Http\Controllers\RefundController;
@@ -165,4 +166,10 @@ Route::group(['prefix' => 'codesavvy-admin', 'as' => 'admin.',], function () {
     // Static Views 
     Route::view('/map', 'admin.map')->name('map')->middleware('auth');
     Route::view('/social', 'admin.social')->name('social')->middleware('auth');
+
+    //Invoices
+    Route::get('/invoice', [InvoiceController::class, 'index'])->name('invoice.index')->middleware('auth');
+    Route::post('/invoice', [InvoiceController::class, 'store'])->name('invoice.store')->middleware('auth');
+    Route::get('/generate-invoice/{id}', [InvoiceController::class, 'generateInvoice']);
+    
 });
