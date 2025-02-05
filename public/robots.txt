@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+/codesavvy-admin
+
+Sitemap: https://codesavvynest.com/sitemap.xml
